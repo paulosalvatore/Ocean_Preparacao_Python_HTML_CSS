@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minha página HTML</title>
+</head>
+<body>
+
+<div class="jogo">
+    {% if not premio %}
+    <form method="post">
+
+        <div class="jogo__input">
+            <label for="nome">Digite o seu nome: </label>
+            <input name="nome" id="nome" value="{{ request.form['nome'] }}" required>
+        </div>
+
+        <div class="jogo__input">
+            <label for="escolha1">Futurista</label>
+            <input type="radio" id="escolha1" name="escolha" value="futurista" checked>
+
+            <label for="escolha2">Era Medieval</label>
+            <input type="radio" id="escolha2" name="escolha" value="medieval">
+        </div>
+
+        <div class="jogo__input">
+            <input type="submit" value="Save">
+        </div>
+    </form>
+
+    {% else %}
+
+    <div class="jogo__premio">{{ nome }}, você recebeu {{ premio }}!</div>
+
+    <div class="jogo__input">
+        <a href="/">Jogar novamente!</a>
+    </div>
+
+    {% endif %}
+</div>
+
+</body>
+</html>
