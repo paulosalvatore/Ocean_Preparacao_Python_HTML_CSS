@@ -17,11 +17,14 @@
         </div>
 
         <div class="jogo__input">
-            <label for="escolha1" class="jogo__label">Futurista</label>
-            <input type="radio" id="escolha1" name="escolha" value="futurista" checked>
+            <input type="radio" id="escolha1" name="escolha" value="bulbassauro" checked>
+            <label for="escolha1" class="jogo__label">Bulbassauro</label><br>
 
-            <label for="escolha2" class="jogo__label">Era Medieval</label>
-            <input type="radio" id="escolha2" name="escolha" value="medieval">
+            <input type="radio" id="escolha2" name="escolha" value="charmander">
+            <label for="escolha2" class="jogo__label">Charmander</label><br>
+
+            <input type="radio" id="escolha3" name="escolha" value="squirtle">
+            <label for="escolha3" class="jogo__label">Squirtle</label>
         </div>
 
         <div class="jogo__input">
@@ -31,7 +34,7 @@
 
     {% else %}
 
-    <div class="jogo__premio">{{ nome }}, você recebeu <b>{{ premio }}</b>!</div>
+    <div class="jogo__premio">{{ nome }}, você capturou <b>{{ premio }}</b>!</div>
 
     <div class="jogo__premio-imagem">
         <img src="{{ premio_imagem }}" alt="Imagem do Prêmio" width="100%">
