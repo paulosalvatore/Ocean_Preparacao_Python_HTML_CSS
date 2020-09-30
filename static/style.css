@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    margin: 0;
+    min-height: calc(100vh - 40px);
+    background: #eee;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px 0;
+}
+
+.jogo {
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-radius: 15px;
+}
+
+.jogo .jogo__input {
+    padding: 10px;
+}
+
+.jogo .jogo__input .jogo__label {
+}
+
+.jogo .jogo__input .jogo__label.jogo__label--nome {
+    padding-right: 10px;
+}
+
+.jogo .jogo__input.jogo__input--jogar-novamente {
+    padding-top: 25px;
+}
+
+.jogo .jogo__botao {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.jogo__premio {
+    margin-bottom: 15px;
+    color: #4caf50;
+    font-size: 22px;
+}

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Minha página HTML</title>
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
 
@@ -11,29 +12,33 @@
     <form method="post">
 
         <div class="jogo__input">
-            <label for="nome">Digite o seu nome: </label>
+            <label for="nome" class="jogo__label jogo__label--nome">Digite o seu nome</label>
             <input name="nome" id="nome" value="{{ request.form['nome'] }}" required>
         </div>
 
         <div class="jogo__input">
-            <label for="escolha1">Futurista</label>
+            <label for="escolha1" class="jogo__label">Futurista</label>
             <input type="radio" id="escolha1" name="escolha" value="futurista" checked>
 
-            <label for="escolha2">Era Medieval</label>
+            <label for="escolha2" class="jogo__label">Era Medieval</label>
             <input type="radio" id="escolha2" name="escolha" value="medieval">
         </div>
 
         <div class="jogo__input">
-            <input type="submit" value="Save">
+            <input type="submit" class="jogo__botao" value="Jogar!">
         </div>
     </form>
 
     {% else %}
 
-    <div class="jogo__premio">{{ nome }}, você recebeu {{ premio }}!</div>
+    <div class="jogo__premio">{{ nome }}, você recebeu <b>{{ premio }}</b>!</div>
 
-    <div class="jogo__input">
-        <a href="/">Jogar novamente!</a>
+    <div class="jogo__premio-imagem">
+        <img src="{{ premio_imagem }}" alt="Imagem do Prêmio" width="100%">
+    </div>
+
+    <div class="jogo__input jogo__input--jogar-novamente">
+        <a href="/" class="jogo__botao">Jogar novamente!</a>
     </div>
 
     {% endif %}
